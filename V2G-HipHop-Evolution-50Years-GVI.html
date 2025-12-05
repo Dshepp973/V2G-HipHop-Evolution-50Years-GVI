@@ -185,7 +185,7 @@
         }
 
         /* Spin Animation */
-        .spin-slow { animation: spin 10s linear infinite; }
+        .spin-slow { animation: spin 1s linear infinite; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
 
         /* Timeline Connector */
@@ -197,7 +197,7 @@
             width: 1px;
             background: linear-gradient(to bottom, transparent, #444, #444, transparent);
             transform: translateX(-50%);
-            z-index: -1;
+            z-index: 5; /* Adjusted z-index for clarity */
         }
 
         /* Chart Containers */
@@ -229,9 +229,58 @@
             fill: #fff;
             font-weight: bold;
         }
+
+        /* --- New Portal Styles (Recovered) --- */
+        .portal-container {
+            position: absolute;
+            z-index: 20;
+            top: 5%; /* Moved high up */
+        }
+
+        .portal-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .portal-frame {
+            position: relative;
+            border-radius: 12px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            border: 2px solid;
+            box-shadow: 0 0 15px 5px;
+            transition: transform 0.3s ease;
+        }
+        .portal-frame:hover {
+            transform: scale(1.05);
+        }
+
+        .qr-code-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+            display: block;
+            background-color: white;
+            padding: 5px;
+        }
+        /* End New Portal Styles */
+        
+        /* Music Player Styles (Removed) */
+        .music-player-fixed {
+            display: none; 
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(0, -10px); }
+            100% { transform: translate(0, 0); }
+        }
+
     </style>
 </head>
 <body class="antialiased selection:bg-pink-600 selection:text-white">
+
+    <!-- Music Player HTML REMOVED -->
 
     <!-- Sticky Navigation (Desktop) -->
     <nav class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:flex flex-col gap-6 items-end">
@@ -271,6 +320,35 @@
 
     <!-- Hero Section -->
     <header id="hero" class="section-bg bg-hero relative min-h-screen flex items-center justify-center overflow-hidden">
+        
+        <!-- Portal 1: Venomous2000 Access (Right Side) -->
+        <div class="portal-container right-6" style="right: 5%; top: 5%;">
+            <a href="https://www.Venomous2000.com" target="_blank" class="portal-float flex flex-col items-center group">
+                <div class="portal-frame border-pink-500 shadow-pink-900/50 hover:shadow-pink-400/80">
+                    <img id="qr-v2g-sub" 
+                         src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://mailchi.mp/fec11c0c83f8/new-subscribers" 
+                         class="qr-code-img" 
+                         alt="QR Code for Mailchimp Subscription"
+                         onerror="this.src='https://placehold.co/100x100/101010/FF0099?text=SCAN+FOR+SUBSCRIBE'">
+                </div>
+                <span class="mt-2 text-xs font-mono text-pink-500 uppercase font-bold group-hover:text-white transition-colors">V2G ACCESS & SUBSCRIBE</span>
+            </a>
+        </div>
+
+        <!-- Portal 2: GVI / The Invenity Cosmic (Left Side - "3D Sub Portal") -->
+        <div class="portal-container left-6" style="left: 5%; top: 5%;">
+             <a href="https://www.THEINVENITYCOSMIC.COM" target="_blank" class="portal-float flex flex-col items-center group">
+                <div class="portal-frame border-yellow-500 shadow-yellow-900/50 hover:shadow-yellow-400/80">
+                     <img id="qr-gvi-link" 
+                          src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.NAHUCEGVI.org" 
+                          class="qr-code-img" 
+                          alt="QR Code for NAHUCEGVI.org"
+                          onerror="this.src='https://placehold.co/100x100/101010/FFD700?text=SCAN+FOR+GVI'">
+                </div>
+                <span class="mt-2 text-xs font-mono text-yellow-500 uppercase font-bold group-hover:text-white transition-colors">GVI COSMIC SCAN</span>
+            </a>
+        </div>
+
         <!-- Overlay is handled by CSS -->
         <div class="section-content container mx-auto px-6 relative z-10 text-center">
             <div class="inline-block mb-6 px-4 py-1 rounded border border-yellow-500/30 bg-black/50 text-yellow-500 text-xs tracking-[0.2em] font-bold">
@@ -288,7 +366,7 @@
                     Fifty years of rhythm, rebellion, and rhyme. A digital archive of the culture that changed the world.
                 </p>
                 
-                <!-- Updated Branding / Living Record Notice -->
+                <!-- Updated Branding / Living Record Notice with all hashtags -->
                 <div class="p-6 bg-black/40 border border-yellow-500/20 rounded-lg backdrop-blur-md inline-block max-w-2xl transform hover:scale-105 transition-transform duration-500">
                     <div class="flex flex-col items-center gap-2">
                         <span class="text-neon-blue font-mono text-xs tracking-[0.3em] uppercase mb-1">A Living Record Deep Dive</span>
@@ -300,7 +378,7 @@
                             A Contribution to Hip-Hop by <a href="https://Venomous2000.com" target="_blank" class="text-white font-bold hover:text-cyan-400 transition-colors">Venomous2000</a> <span class="text-gray-600">aka</span> <a href="https://www.NahuceGVI.org" target="_blank" class="text-white font-bold hover:text-green-400 transition-colors">Dwayne L. Sheppard</a>
                         </p>
                         <p class="text-sm font-black text-yellow-500 mt-2 tracking-widest">
-                            #GVI #V2G
+                            #GVI #V2G #RPP #NPD #SCW #NNS #TIC #BBT #SVP #USV #AOF #NJ #QS #VM #EMP #GG #DS2000 #H-AVE
                         </p>
                     </div>
                 </div>
@@ -326,7 +404,7 @@
                         <p class="text-gray-300 text-lg leading-relaxed mb-6">
                             August 11, 1973. 1520 Sedgwick Avenue. The blueprint was drafted in the dark.
                         </p>
-                        <div class="glass-card p-6 rounded-none border-l-4 border-yellow-500 text-left">
+                        <div class="glass-card p-6 rounded-none border-l-4 border-yellow-500 text-left" onclick="toggleCard(this)">
                             <h5 class="text-yellow-500 font-bold uppercase text-sm mb-2">The Catalyst: NYC Blackout of '77</h5>
                             <p class="text-sm text-gray-300 leading-relaxed">
                                 While DJ Kool Herc planted the seed in 1973, many historians argue the culture truly exploded after the New York City Blackout of 1977. During the looting that occurred in the widespread darkness, hundreds of aspiring DJs and MCs in the impoverished Bronx were able to "acquire" high-end audio equipment (mixers, turntables, speakers) that was previously unaffordable. This sudden influx of technology into the borough allowed the art form to scale from house parties to block parties almost overnight.
@@ -337,7 +415,7 @@
                     <div class="w-full md:w-1/2 order-1 md:order-2">
                         <div class="grid grid-cols-2 gap-4">
                             <!-- Pillars -->
-                            <div class="glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
+                            <div class="interactive-card glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
                                 <i data-lucide="disc-3" class="w-8 h-8 text-yellow-500 mb-4 group-hover:rotate-90 transition-transform"></i>
                                 <h4 class="text-lg font-bold">DJing</h4>
                                 <div class="expand-content">
@@ -348,7 +426,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
+                            <div class="interactive-card glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
                                 <i data-lucide="mic-2" class="w-8 h-8 text-yellow-500 mb-4 group-hover:scale-110 transition-transform"></i>
                                 <h4 class="text-lg font-bold">MCing</h4>
                                 <div class="expand-content">
@@ -358,7 +436,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
+                            <div class="interactive-card glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
                                 <i data-lucide="move" class="w-8 h-8 text-yellow-500 mb-4 group-hover:translate-x-1 transition-transform"></i>
                                 <h4 class="text-lg font-bold">B-Boying</h4>
                                 <div class="expand-content">
@@ -368,7 +446,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
+                            <div class="interactive-card glass-card p-6 hover:bg-white/5 transition-all cursor-pointer group border-t-2 border-transparent hover:border-yellow-500" onclick="toggleCard(this)">
                                 <i data-lucide="spray-can" class="w-8 h-8 text-yellow-500 mb-4 group-hover:-rotate-12 transition-transform"></i>
                                 <h4 class="text-lg font-bold">Graffiti</h4>
                                 <div class="expand-content">
@@ -552,14 +630,14 @@
                         
                         <!-- Left: Tech Disruptor Timeline -->
                         <div class="order-2 lg:order-1 relative">
-                             <!-- Decorative Tech Lines -->
-                             <div class="absolute top-0 bottom-0 left-4 w-px bg-blue-900/50"></div>
-                             
-                             <h4 class="text-blue-500 font-bold mb-6 flex items-center gap-2">
-                                 <i data-lucide="cpu" class="w-5 h-5"></i> SYSTEM_FAILURE: THE INDUSTRY
-                             </h4>
+                            <!-- Decorative Tech Lines -->
+                            <div class="absolute top-0 bottom-0 left-4 w-px bg-blue-900/50"></div>
+                            
+                            <h4 class="text-blue-500 font-bold mb-6 flex items-center gap-2">
+                                <i data-lucide="cpu" class="w-5 h-5"></i> SYSTEM_FAILURE: THE INDUSTRY
+                            </h4>
 
-                             <div class="space-y-6 pl-10">
+                            <div class="space-y-6 pl-10">
                                 <div class="relative group cursor-pointer" onclick="toggleCard(this)">
                                     <div class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-blue-900 border border-blue-500"></div>
                                     <h5 class="text-white font-bold">1999: Napster</h5>
@@ -595,7 +673,7 @@
                                         </p>
                                     </div>
                                 </div>
-                             </div>
+                            </div>
                         </div>
                         
                         <!-- Right: Context & Chart -->
@@ -627,7 +705,7 @@
                         
                         <!-- Interactive Data Cards -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="group glass-card p-6 border-l-4 border-green-500 hover:bg-green-900/20 transition-all cursor-pointer" onclick="toggleCard(this)">
+                            <div class="group glass-card p-8 border-l-4 border-green-500 hover:bg-green-900/20 transition-all cursor-pointer" onclick="toggleCard(this)">
                                 <div class="flex justify-between items-start mb-2">
                                     <i data-lucide="play-circle" class="text-green-500"></i>
                                     <span class="text-xs text-gray-500 font-mono">MECHANICS</span>
@@ -642,7 +720,7 @@
                                 </div>
                             </div>
 
-                            <div class="group glass-card p-6 border-l-4 border-green-500 hover:bg-green-900/20 transition-all cursor-pointer" onclick="toggleCard(this)">
+                            <div class="group glass-card p-8 border-l-4 border-green-500 hover:bg-green-900/20 transition-all cursor-pointer" onclick="toggleCard(this)">
                                 <div class="flex justify-between items-start mb-2">
                                     <i data-lucide="globe" class="text-green-500"></i>
                                     <span class="text-xs text-gray-500 font-mono">CULTURE</span>
@@ -668,7 +746,6 @@
                                             <span class="font-bold">Kendrick Lamar's</span> *DAMN.* won the Pulitzer Prize for Music, the first non-jazz/non-classical work to ever win the award.
                                         </li>
                                         <li>
-                                            <span class="text-green-400 font-bold block text-xs mb-1">2021: THE DOCTORATE</span>
                                             <span class="font-bold">Black Thought</span> (Tariq Trotter) received an Honorary Doctorate of Fine Arts from Rutgers University. Often hailed as the "Poet Laureate of Hip-Hop," this acknowledged his mastery of the English language and lyrical composition.
                                         </li>
                                     </ul>
@@ -825,7 +902,7 @@
                             <path d="M500,200 L720,130" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Russia -->
                             
                             <!-- SIBERIA BRANCH (From Russia) -->
-                            <path d="M720,130 L800,100" stroke="#555" stroke-width="1" stroke-dasharray="2,2" /> <!-- To Siberia -->
+                            <path d="M720,130 L800,110" stroke="#555" stroke-width="1" stroke-dasharray="2,2" /> <!-- To Siberia (Adjusted Y to 110) -->
                              <!-- Australia (Near UK) -->
                              <path d="M400,80 L320,60" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Australia -->
 
@@ -844,7 +921,7 @@
                             <path d="M820,420 L820,550" stroke="#bd00ff" stroke-width="2" /> <!-- To Texas -->
                             <path d="M820,420 L900,350" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Nigeria -->
                             <path d="M820,420 L920,480" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To South Africa -->
-                            <path d="M900,350 L950,280" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Ethiopia (From Nigeria) -->
+                            <path d="M900,350 L935,310" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Ethiopia (Adjusted Y to 310) -->
                             <path d="M820,420 L850,250" stroke="#ef4444" stroke-width="1" stroke-dasharray="2,2" /> <!-- To Palestine -->
 
                             <!-- NODES -->
@@ -928,6 +1005,7 @@
                                 <text x="600" y="275" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">BMORE</text>
                             </g>
 
+                            <!-- US SATELLITES (MIDWEST/SOUTH) -->
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('ohio')">
                                 <circle cx="260" cy="300" r="24" fill="#FBBF24" opacity="0.8" />
                                 <text x="260" y="335" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">OHIO</text>
@@ -976,8 +1054,8 @@
                                 <text x="760" y="135" text-anchor="middle" fill="#fff" font-size="10">RUSSIA</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('siberia')">
-                                <circle cx="800" cy="100" r="18" fill="#fff" opacity="0.5" />
-                                <text x="830" y="105" text-anchor="middle" fill="#fff" font-size="9">SIBERIA</text>
+                                <circle cx="800" cy="110" r="18" fill="#fff" opacity="0.5" /> <!-- ADJUSTED Y from 100 to 110 -->
+                                <text x="830" y="115" text-anchor="middle" fill="#fff" font-size="9">SIBERIA</text>
                             </g>
                             <!-- Australia -->
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('australia')">
@@ -1021,8 +1099,8 @@
                                 <text x="940" y="355" text-anchor="middle" fill="#bd00ff" font-size="10">NIGERIA</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('ethiopia')">
-                                <circle cx="950" cy="280" r="20" fill="#bd00ff" opacity="0.6" />
-                                <text x="990" y="285" text-anchor="middle" fill="#bd00ff" font-size="10">ETHIOPIA</text>
+                                <circle cx="935" cy="310" r="20" fill="#bd00ff" opacity="0.6" /> <!-- ADJUSTED X from 950 and Y from 280 to 310 -->
+                                <text x="965" y="315" text-anchor="middle" fill="#bd00ff" font-size="10">ETHIOPIA</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('southafrica')">
                                 <circle cx="920" cy="480" r="22" fill="#bd00ff" opacity="0.6" />
@@ -1051,7 +1129,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                 <!-- Future Card 1 -->
-                <div class="glass-card p-8 group hover:-translate-y-2 transition-transform duration-500">
+                <div class="glass-card p-8 group hover:-translate-y-2 transition-transform duration-500" onclick="toggleCard(this)">
                     <div class="w-12 h-12 bg-purple-900/50 rounded flex items-center justify-center text-purple-400 mb-6 border border-purple-500/30">
                         <i data-lucide="blocks" class="w-6 h-6"></i>
                     </div>
@@ -1059,10 +1137,14 @@
                     <p class="text-gray-400 text-sm leading-relaxed">
                         The end of the "360 Deal." Smart contracts will automate royalties, splitting revenue instantly between producers, writers, and sample holders, creating a transparent ledger of culture.
                     </p>
+                    <div class="expand-content">
+                        <span class="archive-header">DETAILS</span>
+                        <p class="archive-text">Decentralization through blockchain technology aims to give artists greater control over their intellectual property and revenue streams, potentially replacing traditional record labels with automated contracts.</p>
+                    </div>
                 </div>
                 
                 <!-- Future Card 2 -->
-                <div class="glass-card p-8 group hover:-translate-y-2 transition-transform duration-500">
+                <div class="glass-card p-8 group hover:-translate-y-2 transition-transform duration-500" onclick="toggleCard(this)">
                     <div class="w-12 h-12 bg-pink-900/50 rounded flex items-center justify-center text-pink-400 mb-6 border border-pink-500/30">
                         <i data-lucide="glasses" class="w-6 h-6"></i>
                     </div>
@@ -1070,10 +1152,14 @@
                     <p class="text-gray-400 text-sm leading-relaxed">
                         As the internet homogenizes, value returns to the hyper-local. We will see the rise of micro-scenes in non-traditional hubs (Africa, SE Asia, rural US) dominating global charts.
                     </p>
+                    <div class="expand-content">
+                        <span class="archive-header">DETAILS</span>
+                        <p class="archive-text">Viral platforms like TikTok and localized streaming data mean a regional sound can gain global traction instantly, shifting power away from traditional metropolitan music centers (NYC/LA).</p>
+                    </div>
                 </div>
                 
                 <!-- Future Card 3 -->
-                <div class="glass-card p-8 group hover:-translate-y-2 transition-transform duration-500">
+                <div class="glass-card p-8 group hover:-translate-y-2 transition-transform duration-500" onclick="toggleCard(this)">
                     <div class="w-12 h-12 bg-yellow-900/50 rounded flex items-center justify-center text-yellow-400 mb-6 border border-yellow-500/30">
                         <i data-lucide="book-open" class="w-6 h-6"></i>
                     </div>
@@ -1081,9 +1167,26 @@
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Hip-Hop becomes the primary curriculum for history, philosophy, and economics in universities. It transitions from "counter-culture" to the established canon of Western art.
                     </p>
+                    <div class="expand-content">
+                        <span class="archive-header">DETAILS</span>
+                        <p class="archive-text">The genre's acceptance into prestigious institutions (Pulitzer, Harvard) confirms its permanent place as a subject of serious academic and historical study, ensuring its preservation and continued influence.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Google Review Link (LAST Section before the Footer) -->
+        <section id="feedback" class="py-12 text-center bg-gray-900/50 border-t border-b border-gray-800">
+            <div class="container mx-auto px-6">
+                 <h4 class="text-3xl font-head text-white mb-4">GIVE US FEEDBACK</h4>
+                <a href="https://share.google/WeAsxDPfRHWCHZOer" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-yellow-600 text-black font-bold uppercase rounded-lg tracking-widest transition-all glow-box hover:bg-yellow-400" style="box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);">
+                    <i data-lucide="star" class="w-5 h-5 fill-black"></i>
+                    LEAVE A GOOGLE REVIEW
+                </a>
+                <p class="text-gray-500 text-xs mt-3 font-mono">Your perspective helps preserve the culture.</p>
+            </div>
+        </section>
+
 
         <!-- V2G Branding Footer: UPDATED -->
         <footer class="py-16 border-t border-white/5 relative overflow-hidden bg-black">
@@ -1120,10 +1223,130 @@
     </main>
 
     <script>
-        // Initialize Icons
-        lucide.createIcons();
+        // --- CORE CHART VARIABLES (GLOBAL SCOPE) ---
+        const commonOptions = {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+                legend: { labels: { color: '#9ca3af', font: { family: 'Inter' } } },
+                tooltip: { backgroundColor: 'rgba(20, 20, 20, 0.9)', titleColor: '#fff', bodyColor: '#ccc', borderColor: '#333', borderWidth: 1, padding: 10 }
+            }
+        };
+
+        const gridColor = 'rgba(255, 255, 255, 0.05)';
+        const textColor = '#6b7280';
+        let radarChart;
         
-        // --- TREE DATA (EXPANDED GLOBAL) ---
+        // --- CHART INITIALIZATION FUNCTIONS (GLOBAL SCOPE) ---
+        function initRadarChart() {
+            const ctxRadar = document.getElementById('radarChart90s');
+            if (ctxRadar) {
+                radarChart = new Chart(ctxRadar, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Jazz/Soul Samples', 'Tempo Speed', 'Synth Heavy', 'Lyrical Density', 'Bass Heavy'],
+                        datasets: [
+                            {
+                                label: 'East Coast (Boom Bap)',
+                                data: [9, 5, 2, 9, 6],
+                                borderColor: '#f97316', backgroundColor: 'rgba(249, 115, 22, 0.2)', pointBackgroundColor: '#f97316', borderWidth: 2
+                            }
+                        ]
+                    },
+                    options: {
+                        ...commonOptions,
+                        scales: {
+                            r: {
+                                angleLines: { color: gridColor }, grid: { color: gridColor },
+                                pointLabels: { color: '#9ca3af', font: { size: 10, family: 'Roboto Mono' } }, ticks: { display: false, max: 10 }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function updateRadarChart(region) {
+            if(!radarChart) {
+                initRadarChart();
+                if (!radarChart) return;
+            }
+            
+            let newData, newLabel, newColor;
+            if (region === 'east') { newLabel = 'East Coast (Boom Bap)'; newData = [9, 5, 2, 9, 6]; newColor = '#f97316'; } 
+            else if (region === 'west') { newLabel = 'West Coast (G-Funk)'; newData = [4, 6, 9, 6, 9]; newColor = '#3b82f6'; } 
+            else if (region === 'south') { newLabel = 'Dirty South'; newData = [7, 8, 7, 5, 10]; newColor = '#a855f7'; } 
+            else if (region === 'north') { newLabel = 'The North (Speed & Soul)'; newData = [8, 9, 4, 10, 6]; newColor = '#eab308'; }
+
+            radarChart.data.datasets[0].label = newLabel;
+            radarChart.data.datasets[0].data = newData;
+            radarChart.data.datasets[0].borderColor = newColor;
+            radarChart.data.datasets[0].backgroundColor = newColor + '33';
+            radarChart.data.datasets[0].pointBackgroundColor = newColor;
+            radarChart.update();
+        }
+
+        // --- GLOBAL UTILITY FUNCTIONS (used by onclick) ---
+        function toggleCard(element) {
+            const content = element.querySelector('.expand-content');
+            const chevron = element.querySelector('.chevron');
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                if(chevron) chevron.classList.remove('rotated');
+            } else {
+                content.classList.add('open');
+                if(chevron) chevron.classList.add('rotated');
+            }
+        }
+
+        function switchRegion(region) {
+            document.querySelectorAll('.region-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.region-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`btn-${region}`).classList.add('active');
+            document.getElementById(`content-${region}`).classList.add('active');
+            updateRadarChart(region);
+        }
+
+        function showNodeDetails(nodeKey) {
+            const data = treeData[nodeKey];
+            const panel = document.getElementById('tree-details');
+            const content = document.getElementById('detail-content');
+            
+            // Fade out
+            content.style.opacity = '0';
+            
+            setTimeout(() => {
+                // Update Content
+                content.innerHTML = `
+                    <div class="border-l-4 border-current pl-4 ${data.color}">
+                        <span class="font-mono text-xs uppercase tracking-widest text-gray-500 mb-1 block">${data.year}</span>
+                        <h4 class="text-3xl font-bold text-white mb-4 uppercase leading-none">${data.title}</h4>
+                    </div>
+                    
+                    <div class="mt-6 space-y-6">
+                        <div>
+                            <span class="text-xs font-mono text-gray-600 uppercase block mb-2">ORIGIN STORY</span>
+                            <p class="text-gray-300 text-sm leading-relaxed">${data.description}</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/5 p-3 rounded">
+                                <span class="text-[10px] font-mono text-gray-500 uppercase block mb-1">KEY FIGURES</span>
+                                <p class="text-white text-xs font-bold">${data.figures}</p>
+                            </div>
+                            <div class="bg-white/5 p-3 rounded">
+                                <span class="text-[10px] font-mono text-gray-500 uppercase block mb-1">GLOBAL IMPACT</span>
+                                <p class="text-white text-xs">${data.impact}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                // Fade in
+                content.style.opacity = '1';
+                panel.classList.remove('border-yellow-500');
+            }, 200);
+        }
+
         const treeData = {
             'root': {
                 title: "THE SOURCE: THE BRONX",
@@ -1431,303 +1654,115 @@
             }
         };
 
-        function showNodeDetails(nodeKey) {
-            const data = treeData[nodeKey];
-            const panel = document.getElementById('tree-details');
-            const content = document.getElementById('detail-content');
-            
-            // Fade out
-            content.style.opacity = '0';
-            
-            setTimeout(() => {
-                // Update Content
-                content.innerHTML = `
-                    <div class="border-l-4 border-current pl-4 ${data.color}">
-                        <span class="font-mono text-xs uppercase tracking-widest text-gray-500 mb-1 block">${data.year}</span>
-                        <h4 class="text-3xl font-bold text-white mb-4 uppercase leading-none">${data.title}</h4>
-                    </div>
-                    
-                    <div class="mt-6 space-y-6">
-                        <div>
-                            <span class="text-xs font-mono text-gray-600 uppercase block mb-2">ORIGIN STORY</span>
-                            <p class="text-gray-300 text-sm leading-relaxed">${data.description}</p>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-white/5 p-3 rounded">
-                                <span class="text-[10px] font-mono text-gray-500 uppercase block mb-1">KEY FIGURES</span>
-                                <p class="text-white text-xs font-bold">${data.figures}</p>
-                            </div>
-                            <div class="bg-white/5 p-3 rounded">
-                                <span class="text-[10px] font-mono text-gray-500 uppercase block mb-1">GLOBAL IMPACT</span>
-                                <p class="text-white text-xs">${data.impact}</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                // Fade in
-                content.style.opacity = '1';
-                panel.classList.remove('border-yellow-500');
-            }, 200);
-        }
+        // --- CORE SCRIPT EXECUTION STARTS HERE, ENSURING ALL HTML IS LOADED ---
+        window.onload = function() {
+            // Initialize Icons
+            lucide.createIcons();
 
-        // --- Interaction Logic: Toggle Cards ---
-        function toggleCard(element) {
-            const content = element.querySelector('.expand-content');
-            const chevron = element.querySelector('.chevron');
-            
-            if (content.classList.contains('open')) {
-                content.classList.remove('open');
-                if(chevron) chevron.classList.remove('rotated');
-            } else {
-                content.classList.add('open');
-                if(chevron) chevron.classList.add('rotated');
-            }
-        }
+            // --- CHART DATA AND INITIALIZATION ---
+            initRadarChart();
 
-        // Region Switcher Logic (90s)
-        function switchRegion(region) {
-            // Reset Buttons
-            document.querySelectorAll('.region-btn').forEach(btn => btn.classList.remove('active'));
-            // Reset Content
-            document.querySelectorAll('.region-content').forEach(content => content.classList.remove('active'));
-            
-            // Activate Select
-            document.getElementById(`btn-${region}`).classList.add('active');
-            document.getElementById(`content-${region}`).classList.add('active');
-
-            // Update Chart Data Dynamic
-            updateRadarChart(region);
-        }
-
-        // Chart Data & Config
-        const commonOptions = {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { labels: { color: '#9ca3af', font: { family: 'Inter' } } },
-                tooltip: { 
-                    backgroundColor: 'rgba(20, 20, 20, 0.9)', 
-                    titleColor: '#fff',
-                    bodyColor: '#ccc',
-                    borderColor: '#333',
-                    borderWidth: 1,
-                    padding: 10
-                }
-            }
-        };
-
-        const gridColor = 'rgba(255, 255, 255, 0.05)';
-        const textColor = '#6b7280';
-
-        // 90s Radar Chart
-        let radarChart;
-        const ctxRadar = document.getElementById('radarChart90s');
-        
-        function initRadarChart() {
-            if (ctxRadar) {
-                radarChart = new Chart(ctxRadar, {
-                    type: 'radar',
-                    data: {
-                        labels: ['Jazz/Soul Samples', 'Tempo Speed', 'Synth Heavy', 'Lyrical Density', 'Bass Heavy'],
+            const ctxLine = document.getElementById('lineChart00s');
+            if (ctxLine) {
+                new Chart(ctxLine, {
+                    type: 'line', data: {
+                        labels: ['2000', '2002', '2004', '2006', '2008', '2010'],
                         datasets: [
-                            {
-                                label: 'East Coast (Boom Bap)',
-                                data: [9, 5, 2, 9, 6],
-                                borderColor: '#f97316', // Orange
-                                backgroundColor: 'rgba(249, 115, 22, 0.2)',
-                                pointBackgroundColor: '#f97316',
-                                borderWidth: 2
-                            }
+                            { label: 'CD Sales', data: [95, 80, 65, 50, 35, 20], borderColor: '#ef4444', backgroundColor: '#ef4444', tension: 0.4 },
+                            { label: 'Digital/Piracy', data: [5, 20, 35, 50, 65, 80], borderColor: '#3b82f6', backgroundColor: '#3b82f6', tension: 0.4 }
                         ]
                     },
                     options: {
                         ...commonOptions,
+                        scales: { y: { grid: { color: gridColor }, ticks: { color: textColor } }, x: { grid: { display: false }, ticks: { color: textColor } } }
+                    }
+                });
+            }
+
+            const ctxBar10 = document.getElementById('barChart10s');
+            if (ctxBar10) {
+                new Chart(ctxBar10, {
+                    type: 'bar', data: {
+                        labels: ['Hip-Hop/R&B', 'Rock', 'Pop', 'Country'],
+                        datasets: [{
+                            label: 'Market Share % (2017)', data: [24.5, 20.8, 12.1, 8.7],
+                            backgroundColor: ['#22c55e', '#374151', '#f472b6', '#f59e0b'], borderRadius: 2
+                        }]
+                    },
+                    options: {
+                        ...commonOptions, indexAxis: 'y',
+                        scales: { x: { grid: { color: gridColor }, ticks: { color: textColor } }, y: { grid: { display: false }, ticks: { color: '#fff', font: { weight: 'bold' } } } }
+                    }
+                });
+            }
+
+            const ctxBar20 = document.getElementById('barChart20s');
+            if (ctxBar20) {
+                new Chart(ctxBar20, {
+                    type: 'bar', data: {
+                        labels: ['Traditional Promo', 'Viral/TikTok Hit'],
+                        datasets: [{
+                            label: 'Days to Chart', data: [90, 14],
+                            backgroundColor: ['#4b5563', '#ec4899'], borderRadius: 4, barThickness: 30
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
                         scales: {
-                            r: {
-                                angleLines: { color: gridColor },
-                                grid: { color: gridColor },
-                                pointLabels: { color: '#9ca3af', font: { size: 10, family: 'Roboto Mono' } },
-                                ticks: { display: false, max: 10 }
-                            }
+                            y: { beginAtZero: true, grid: { color: gridColor }, ticks: { color: textColor }, title: { display: true, text: 'Days', color: '#666' } },
+                            x: { grid: { display: false }, ticks: { color: '#fff' } }
                         }
                     }
                 });
             }
-        }
 
-        function updateRadarChart(region) {
-            if(!radarChart) return;
 
-            let newData, newLabel, newColor;
-
-            if (region === 'east') {
-                newLabel = 'East Coast (Boom Bap)';
-                newData = [9, 5, 2, 9, 6];
-                newColor = '#f97316';
-            } else if (region === 'west') {
-                newLabel = 'West Coast (G-Funk)';
-                newData = [4, 6, 9, 6, 9];
-                newColor = '#3b82f6';
-            } else if (region === 'south') {
-                newLabel = 'Dirty South';
-                newData = [7, 8, 7, 5, 10];
-                newColor = '#a855f7';
-            } else if (region === 'north') {
-                newLabel = 'The North (Speed & Soul)';
-                newData = [8, 9, 4, 10, 6]; // High samples, High Speed, Low Synth, Max Lyrics, Med Bass
-                newColor = '#eab308';
-            }
-
-            radarChart.data.datasets[0].label = newLabel;
-            radarChart.data.datasets[0].data = newData;
-            radarChart.data.datasets[0].borderColor = newColor;
-            radarChart.data.datasets[0].backgroundColor = newColor + '33'; // Add transparency
-            radarChart.data.datasets[0].pointBackgroundColor = newColor;
-            radarChart.update();
-        }
-
-        initRadarChart();
-
-        // 00s Line Chart
-        const ctxLine = document.getElementById('lineChart00s');
-        if (ctxLine) {
-            new Chart(ctxLine, {
-                type: 'line',
-                data: {
-                    labels: ['2000', '2002', '2004', '2006', '2008', '2010'],
-                    datasets: [
-                        {
-                            label: 'CD Sales',
-                            data: [95, 80, 65, 50, 35, 20],
-                            borderColor: '#ef4444',
-                            backgroundColor: '#ef4444',
-                            tension: 0.4
-                        },
-                        {
-                            label: 'Digital/Piracy',
-                            data: [5, 20, 35, 50, 65, 80],
-                            borderColor: '#3b82f6',
-                            backgroundColor: '#3b82f6',
-                            tension: 0.4
-                        }
-                    ]
-                },
-                options: {
-                    ...commonOptions,
-                    scales: {
-                        y: {
-                            grid: { color: gridColor },
-                            ticks: { color: textColor }
-                        },
-                        x: {
-                            grid: { display: false },
-                            ticks: { color: textColor }
-                        }
-                    }
-                }
-            });
-        }
-
-        // 10s Bar Chart
-        const ctxBar10 = document.getElementById('barChart10s');
-        if (ctxBar10) {
-            new Chart(ctxBar10, {
-                type: 'bar',
-                data: {
-                    labels: ['Hip-Hop/R&B', 'Rock', 'Pop', 'Country'],
-                    datasets: [{
-                        label: 'Market Share % (2017)',
-                        data: [24.5, 20.8, 12.1, 8.7],
-                        backgroundColor: ['#22c55e', '#374151', '#f472b6', '#f59e0b'],
-                        borderRadius: 2
-                    }]
-                },
-                options: {
-                    ...commonOptions,
-                    indexAxis: 'y',
-                    scales: {
-                        x: { grid: { color: gridColor }, ticks: { color: textColor } },
-                        y: { grid: { display: false }, ticks: { color: '#fff', font: { weight: 'bold' } } }
-                    }
-                }
-            });
-        }
-
-        // 20s Bar Chart
-        const ctxBar20 = document.getElementById('barChart20s');
-        if (ctxBar20) {
-            new Chart(ctxBar20, {
-                type: 'bar',
-                data: {
-                    labels: ['Traditional Promo', 'Viral/TikTok Hit'],
-                    datasets: [{
-                        label: 'Days to Chart',
-                        data: [90, 14],
-                        backgroundColor: ['#4b5563', '#ec4899'],
-                        borderRadius: 4,
-                        barThickness: 30
-                    }]
-                },
-                options: {
-                    ...commonOptions,
-                    scales: {
-                        y: { 
-                            beginAtZero: true, 
-                            grid: { color: gridColor }, 
-                            ticks: { color: textColor },
-                            title: { display: true, text: 'Days', color: '#666' }
-                        },
-                        x: { 
-                            grid: { display: false }, 
-                            ticks: { color: '#fff' } 
-                        }
-                    }
-                }
-            });
-        }
-
-        // Scroll Animation Observer
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in-section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Navigation Highlight Logic
-        window.addEventListener('scroll', () => {
+            // --- GENERAL SITE INTERACTIVITY (Timeline and Navigation) ---
             const sections = document.querySelectorAll('section, header');
             const navDots = document.querySelectorAll('.nav-dot');
             
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - sectionHeight / 3)) {
-                    current = section.getAttribute('id');
-                }
+            // Handle Fade-In Animations (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
             });
 
-            navDots.forEach(dot => {
-                dot.classList.remove('active');
-                if (dot.id === `nav-${current}`) {
-                    dot.classList.add('active');
-                }
+            // Handle Navigation Dot Highlighting (Scroll Logic)
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const scrollY = window.scrollY;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (scrollY >= (sectionTop - sectionHeight / 3)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navDots.forEach(dot => {
+                    dot.classList.remove('active');
+                    if (dot.id === `nav-${current}`) {
+                        dot.classList.add('active');
+                    }
+                });
             });
-        });
+        }
     </script>
 </body>
 </html>
+
