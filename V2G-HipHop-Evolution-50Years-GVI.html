@@ -282,11 +282,31 @@
             <h2 class="text-5xl md:text-7xl font-graffiti text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 transform -rotate-3 inline-block drop-shadow-2xl">
                 EVOLUTION
             </h2>
-            <p class="max-w-2xl mx-auto mt-8 text-xl text-gray-300 leading-relaxed font-light">
-                Fifty years of rhythm, rebellion, and rhyme. A digital archive of the culture that changed the world.
-            </p>
             
-            <a href="#70s" class="mt-16 inline-flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300">
+            <div class="max-w-3xl mx-auto mt-8 text-center space-y-6">
+                <p class="text-xl text-gray-300 leading-relaxed font-light">
+                    Fifty years of rhythm, rebellion, and rhyme. A digital archive of the culture that changed the world.
+                </p>
+                
+                <!-- Updated Branding / Living Record Notice -->
+                <div class="p-6 bg-black/40 border border-yellow-500/20 rounded-lg backdrop-blur-md inline-block max-w-2xl transform hover:scale-105 transition-transform duration-500">
+                    <div class="flex flex-col items-center gap-2">
+                        <span class="text-neon-blue font-mono text-xs tracking-[0.3em] uppercase mb-1">A Living Record Deep Dive</span>
+                        <p class="text-gray-200 text-sm font-light italic mb-2">
+                            "This is an ongoing, updated archive... preserving the history as much as humanly possible."
+                        </p>
+                        <div class="h-px w-24 bg-gradient-to-r from-transparent via-yellow-500 to-transparent my-2"></div>
+                        <p class="text-xs text-gray-400 uppercase tracking-widest">
+                            A Contribution to Hip-Hop by <a href="https://Venomous2000.com" target="_blank" class="text-white font-bold hover:text-cyan-400 transition-colors">Venomous2000</a> <span class="text-gray-600">aka</span> <a href="https://www.NahuceGVI.org" target="_blank" class="text-white font-bold hover:text-green-400 transition-colors">Dwayne L. Sheppard</a>
+                        </p>
+                        <p class="text-sm font-black text-yellow-500 mt-2 tracking-widest">
+                            #GVI #V2G
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#70s" class="mt-12 inline-flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300">
                 <span class="text-xs tracking-widest uppercase">Begin Timeline</span>
                 <i data-lucide="chevrons-down" class="w-6 h-6 animate-bounce"></i>
             </a>
@@ -434,18 +454,22 @@
                         <p class="text-gray-400 mb-8">The era of the Album. Sonic identities became regional religions.</p>
                         
                         <!-- Region Tabs -->
-                        <div class="flex gap-2 mb-8">
-                            <button onclick="switchRegion('east')" id="btn-east" class="region-btn active flex-1 py-4 bg-gray-900 border border-gray-700 hover:border-orange-500 rounded text-center group">
+                        <div class="flex gap-2 mb-8 flex-wrap">
+                            <button onclick="switchRegion('east')" id="btn-east" class="region-btn active flex-1 py-4 bg-gray-900 border border-gray-700 hover:border-orange-500 rounded text-center group min-w-[80px]">
                                 <span class="block text-xs text-gray-500 mb-1 font-mono">NYC</span>
                                 <span class="block text-xl font-black text-white group-hover:text-orange-500 transition-colors">EAST</span>
                             </button>
-                            <button onclick="switchRegion('west')" id="btn-west" class="region-btn flex-1 py-4 bg-gray-900 border border-gray-700 hover:border-blue-500 rounded text-center group">
+                            <button onclick="switchRegion('west')" id="btn-west" class="region-btn flex-1 py-4 bg-gray-900 border border-gray-700 hover:border-blue-500 rounded text-center group min-w-[80px]">
                                 <span class="block text-xs text-gray-500 mb-1 font-mono">LA</span>
                                 <span class="block text-xl font-black text-white group-hover:text-blue-500 transition-colors">WEST</span>
                             </button>
-                            <button onclick="switchRegion('south')" id="btn-south" class="region-btn flex-1 py-4 bg-gray-900 border border-gray-700 hover:border-purple-500 rounded text-center group">
+                            <button onclick="switchRegion('south')" id="btn-south" class="region-btn flex-1 py-4 bg-gray-900 border border-gray-700 hover:border-purple-500 rounded text-center group min-w-[80px]">
                                 <span class="block text-xs text-gray-500 mb-1 font-mono">ATL</span>
                                 <span class="block text-xl font-black text-white group-hover:text-purple-500 transition-colors">SOUTH</span>
+                            </button>
+                            <button onclick="switchRegion('north')" id="btn-north" class="region-btn flex-1 py-4 bg-gray-900 border border-gray-700 hover:border-yellow-500 rounded text-center group min-w-[80px]">
+                                <span class="block text-xs text-gray-500 mb-1 font-mono">CHI/DET</span>
+                                <span class="block text-xl font-black text-white group-hover:text-yellow-500 transition-colors">NORTH</span>
                             </button>
                         </div>
 
@@ -491,6 +515,20 @@
                                 <li class="flex items-center gap-2"><div class="w-2 h-2 bg-purple-500 rounded-full"></div>Three 6 Mafia - Mystic Stylez (1995)</li>
                             </ul>
                         </div>
+
+                        <div id="content-north" class="region-content glass-card p-6 border-l-4 border-yellow-500">
+                            <h4 class="text-2xl font-bold text-yellow-500 mb-2">The Midwest Swing</h4>
+                            <p class="text-gray-300 text-sm mb-4">Rapid-fire flows, unquantized drums, and Motown soul. Innovation from the heartland.</p>
+                            <span class="archive-header">SONIC DOSSIER</span>
+                            <p class="archive-text mb-4">
+                                The North carved a lane between the coasts by mastering speed and timing. In Chicago, the "Chopper" style emerged—rapid-fire lyricism over smooth melodies (Twista). In Detroit, J Dilla revolutionized production with unquantized, "drunken" drum patterns, while Eminem introduced complex multi-syllabic rhyme schemes that reset the bar for technical ability.
+                            </p>
+                            <ul class="text-sm space-y-2 text-gray-400 font-mono">
+                                <li class="flex items-center gap-2"><div class="w-2 h-2 bg-yellow-500 rounded-full"></div>Common - Resurrection (1994)</li>
+                                <li class="flex items-center gap-2"><div class="w-2 h-2 bg-yellow-500 rounded-full"></div>Twista - Adrenaline Rush (1997)</li>
+                                <li class="flex items-center gap-2"><div class="w-2 h-2 bg-yellow-500 rounded-full"></div>Eminem - The Slim Shady LP (1999)</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- Right: Chart -->
@@ -523,7 +561,7 @@
 
                              <div class="space-y-6 pl-10">
                                 <div class="relative group cursor-pointer" onclick="toggleCard(this)">
-                                    <div class="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-blue-900 border border-blue-500"></div>
+                                    <div class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-blue-900 border border-blue-500"></div>
                                     <h5 class="text-white font-bold">1999: Napster</h5>
                                     <p class="text-xs text-gray-400 mt-1">Music becomes free. Value plummets.</p>
                                     <div class="expand-content">
@@ -535,20 +573,19 @@
                                 </div>
 
                                 <div class="relative group cursor-pointer" onclick="toggleCard(this)">
-                                    <div class="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-gray-800 border border-gray-500 group-hover:bg-white transition-colors"></div>
+                                    <div class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-gray-800 border border-gray-500 group-hover:bg-white transition-colors"></div>
                                     <h5 class="text-white font-bold">2001: The iPod</h5>
                                     <p class="text-xs text-gray-400 mt-1">1,000 songs in your pocket.</p>
                                     <div class="expand-content">
-                                        <img src="https://images.unsplash.com/photo-1592910793663-71887184d0b1?q=80&w=400&auto=format&fit=crop" class="archive-img" alt="Digital Music">
-                                        <span class="archive-header">DEEP DIVE</span>
+                                        <span class="archive-header">REWRITING THE LANDSCAPE</span>
                                         <p class="archive-text">
-                                            Apple's iTunes store standardized digital music at $0.99 per song. This "unbundled" the album; fans no longer had to buy a $15 CD for one hit single. This shifted the artistic focus from creating cohesive, hour-long bodies of work to creating impactful, radio-friendly singles that would sell individually on the digital marketplace.
+                                            The launch of the iPod and its famous "1,000 songs in your pocket" campaign didn't just miniaturize music collections—it completely rewrote the rules of the industry. By unbundling the album, the $0.99 single became the new currency, destroying the $15 CD revenue model. For Hip-Hop, this shift was seismic. It allowed dense, extensive discographies to become portable, traveling with the listener everywhere. This mobility fueled the "Playlist Culture," where artists no longer competed just for album sales, but for a slot in a fan's daily rotation, forcing a shift in songwriting towards catchier, standalone tracks that could survive the shuffle button.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="relative group cursor-pointer" onclick="toggleCard(this)">
-                                    <div class="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-gray-800 border border-gray-500 group-hover:bg-yellow-500 transition-colors"></div>
+                                    <div class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-gray-800 border border-gray-500 group-hover:bg-yellow-500 transition-colors"></div>
                                     <h5 class="text-white font-bold">2005: Datpiff & The Mixtape</h5>
                                     <p class="text-xs text-gray-400 mt-1">Lil Wayne & 50 Cent master the "Free" economy.</p>
                                     <div class="expand-content">
@@ -610,13 +647,31 @@
                                     <i data-lucide="globe" class="text-green-500"></i>
                                     <span class="text-xs text-gray-500 font-mono">CULTURE</span>
                                 </div>
-                                <h4 class="text-xl font-bold text-white mb-1">High Art</h4>
-                                <p class="text-xs text-gray-400">Kendrick & The Pulitzer.</p>
+                                <h4 class="text-xl font-bold text-white mb-1">High Art & The Academy</h4>
+                                <p class="text-xs text-gray-400">Pulitzers, Hall of Fames, and Doctorates.</p>
                                 <div class="expand-content">
-                                    <span class="archive-header">INSTITUTIONAL RECOGNITION</span>
-                                    <p class="archive-text">
-                                        In 2018, Kendrick Lamar's album *DAMN.* became the first non-classical and non-jazz recording to win the Pulitzer Prize for Music. This moment marked the official acceptance of Hip-Hop by the "high art" establishment, validating the genre not just as pop culture, but as a serious, literary art form capable of capturing the complexity of modern African-American life.
+                                    <span class="archive-header">INSTITUTIONAL VALIDATION</span>
+                                    <p class="archive-text mb-4">
+                                        The 2010s marked the era where Hip-Hop was finally welcomed into the highest echelons of Western art and academia, transitioning from "street culture" to established canon.
                                     </p>
+                                    <ul class="space-y-3 text-sm text-gray-300">
+                                        <li class="border-b border-gray-800 pb-2">
+                                            <span class="text-green-400 font-bold block text-xs mb-1">2013: THE HARVARD FELLOWSHIP</span>
+                                            <span class="font-bold">Nas</span> established the <em>Nasir Jones Hiphop Fellowship</em> at Harvard University, cementing the genre as a subject of serious academic study.
+                                        </li>
+                                        <li class="border-b border-gray-800 pb-2">
+                                            <span class="text-green-400 font-bold block text-xs mb-1">2017: SONGWRITERS HALL OF FAME</span>
+                                            <span class="font-bold">Jay-Z</span> became the first rapper inducted into the Songwriters Hall of Fame, officially recognizing rap lyrics as elite songwriting on par with Bob Dylan or Irving Berlin.
+                                        </li>
+                                        <li class="border-b border-gray-800 pb-2">
+                                            <span class="text-green-400 font-bold block text-xs mb-1">2018: THE PULITZER PRIZE</span>
+                                            <span class="font-bold">Kendrick Lamar's</span> *DAMN.* won the Pulitzer Prize for Music, the first non-jazz/non-classical work to ever win the award.
+                                        </li>
+                                        <li>
+                                            <span class="text-green-400 font-bold block text-xs mb-1">2021: THE DOCTORATE</span>
+                                            <span class="font-bold">Black Thought</span> (Tariq Trotter) received an Honorary Doctorate of Fine Arts from Rutgers University. Often hailed as the "Poet Laureate of Hip-Hop," this acknowledged his mastery of the English language and lyrical composition.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -722,98 +777,256 @@
                                     <feGaussianBlur stdDeviation="2" result="blur" />
                                     <feComposite in="SourceGraphic" in2="blur" operator="over" />
                                 </filter>
-                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#333" />
-                                    <stop offset="100%" stop-color="#555" />
-                                </linearGradient>
+                                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                    <path d="M0,0 L0,6 L9,3 z" fill="#FBBF24" />
+                                </marker>
                             </defs>
 
-                            <!-- CENTER HUB -->
-                            <!-- Connections to Tier 1 (US Regions) -->
-                            <path d="M500,400 L500,250" stroke="#555" stroke-width="3" /> <!-- To East -->
-                            <path d="M500,400 L250,400" stroke="#555" stroke-width="3" /> <!-- To West -->
-                            <path d="M500,400 L750,400" stroke="#555" stroke-width="3" /> <!-- To South -->
+                            <!-- CONNECTIONS (Drawn first so they are behind nodes) -->
 
-                            <!-- EUROPE BRANCH (From East Coast) -->
-                            <path d="M500,250 L400,100" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To UK -->
-                            <path d="M500,250 L500,80" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To France -->
-                            <path d="M500,250 L600,100" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Germany -->
-                            <path d="M500,250 L720,120" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Russia -->
+                            <!-- CENTER HUB CONNECTIONS -->
+                            <!-- To Tier 1 (US Regions) -->
+                            <path d="M500,420 L500,200" stroke="#555" stroke-width="2" /> <!-- To East Coast Node (Moved Up) -->
+                            <path d="M500,420 L180,420" stroke="#555" stroke-width="2" /> <!-- To West (Moved Left) -->
+                            <path d="M500,420 L820,420" stroke="#555" stroke-width="2" /> <!-- To South (Moved Right) -->
 
-                            <!-- ASIA & AMERICAS BRANCH (From West Coast) -->
-                            <path d="M250,400 L100,300" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Japan -->
-                            <path d="M250,400 L80,450" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Korea -->
-                            <path d="M250,400 L200,600" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Brazil -->
+                            <!-- NYC BOROUGHS CLUSTER (Radiating from Bronx center: 500,420) -->
+                            <path d="M500,420 L500,330" stroke="#FF0099" stroke-width="1" /> <!-- To Harlem -->
+                            <path d="M500,420 L580,390" stroke="#FF0099" stroke-width="1" /> <!-- To Queens -->
+                            <path d="M500,420 L570,480" stroke="#FF0099" stroke-width="1" /> <!-- To Brooklyn -->
+                            <path d="M500,420 L430,480" stroke="#FF0099" stroke-width="1" /> <!-- To Staten Island -->
+                            <path d="M500,420 L400,400" stroke="#FF0099" stroke-width="2" /> <!-- To NJ (6th Boro) -->
+                            
+                            <!-- LONG ISLAND (From Queens) -->
+                            <path d="M580,390 L660,380" stroke="#FF0099" stroke-width="1" stroke-dasharray="2,2" /> <!-- To Long Island -->
 
-                            <!-- AFRICA BRANCH (From South) -->
-                            <path d="M750,400 L850,250" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Nigeria -->
-                            <path d="M750,400 L900,500" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To South Africa -->
+                            <!-- JAMAICA (THE ROOTS - Feeds into Bronx from bottom) -->
+                            <path d="M500,650 L500,460" stroke="#FBBF24" stroke-width="2" stroke-dasharray="2,2" marker-end="url(#arrow)" /> <!-- To Bronx -->
+
+                            <!-- MIDWEST BRANCH (From Root) -->
+                            <path d="M500,420 L300,250" stroke="#555" stroke-width="2" /> <!-- To Chicago -->
+                            
+                            <!-- NATIVE AMERICAN (Rooted in US Soil) -->
+                            <path d="M500,420 L380,580" stroke="#FBBF24" stroke-width="1" stroke-dasharray="2,2" /> <!-- To Native American -->
+
+                            <!-- EAST COAST BRANCHES (From 500, 200) -->
+                            <path d="M500,200 L550,240" stroke="#555" stroke-width="1" /> <!-- To Philly -->
+                            <path d="M500,200 L450,240" stroke="#555" stroke-width="1" /> <!-- To Boston -->
+                            <path d="M500,200 L600,270" stroke="#555" stroke-width="1" /> <!-- To Baltimore -->
+                            
+                            <path d="M500,200 L400,140" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Canada -->
+                            <path d="M500,200 L640,300" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To PR -->
+
+                            <!-- EUROPE CLUSTER (From East Coast) -->
+                            <path d="M500,200 L400,80" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To UK -->
+                            <path d="M500,200 L480,60" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To France -->
+                            <path d="M500,200 L560,60" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Germany -->
+                            <path d="M500,200 L640,90" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Norway -->
+                            <path d="M500,200 L720,130" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Russia -->
+                            
+                            <!-- SIBERIA BRANCH (From Russia) -->
+                            <path d="M720,130 L800,100" stroke="#555" stroke-width="1" stroke-dasharray="2,2" /> <!-- To Siberia -->
+                             <!-- Australia (Near UK) -->
+                             <path d="M400,80 L320,60" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Australia -->
+
+
+                            <!-- WEST COAST BRANCHES (From 180, 420) -->
+                            <path d="M180,420 L260,300" stroke="#FBBF24" stroke-width="1" stroke-dasharray="2,2" /> <!-- West To Ohio -->
+                            <path d="M180,420 L100,420" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Hawaii -->
+                            <path d="M180,420 L120,320" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Japan -->
+                            <path d="M180,420 L80,240" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Korea -->
+                            <path d="M180,420 L100,150" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To China -->
+                            <path d="M180,420 L60,350" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To India -->
+                            <path d="M180,420 L120,520" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Mexico -->
+                            <path d="M180,420 L200,600" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Brazil -->
+
+                            <!-- SOUTH BRANCHES (From 820, 420) -->
+                            <path d="M820,420 L820,550" stroke="#bd00ff" stroke-width="2" /> <!-- To Texas -->
+                            <path d="M820,420 L900,350" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Nigeria -->
+                            <path d="M820,420 L920,480" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To South Africa -->
+                            <path d="M900,350 L950,280" stroke="#555" stroke-width="1" stroke-dasharray="4,4" /> <!-- To Ethiopia (From Nigeria) -->
+                            <path d="M820,420 L850,250" stroke="#ef4444" stroke-width="1" stroke-dasharray="2,2" /> <!-- To Palestine -->
 
                             <!-- NODES -->
                             
                             <!-- CENTER: BRONX -->
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('root')">
-                                <circle cx="500" cy="400" r="40" fill="#FFD700" filter="url(#glow)" />
-                                <text x="500" y="405" text-anchor="middle" fill="#000" font-size="12" font-weight="bold">THE BRONX</text>
-                                <text x="500" y="455" text-anchor="middle" fill="#FFD700" font-size="10" opacity="0.7">ORIGIN POINT</text>
+                                <circle cx="500" cy="420" r="40" fill="#FFD700" filter="url(#glow)" />
+                                <text x="500" y="425" text-anchor="middle" fill="#000" font-size="12" font-weight="bold">THE BRONX</text>
+                                <text x="500" y="475" text-anchor="middle" fill="#FFD700" font-size="10" opacity="0.7">ORIGIN POINT</text>
+                            </g>
+                            
+                            <!-- JAMAICA (ROOT) -->
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('jamaica')">
+                                <circle cx="500" cy="650" r="30" fill="#059669" opacity="0.9" /> <!-- Green for Jamaica -->
+                                <text x="500" y="655" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">JAMAICA</text>
+                                <text x="500" y="690" text-anchor="middle" fill="#059669" font-size="9">THE ROOT</text>
                             </g>
 
-                            <!-- TIER 1: US REGIONS -->
+                            <!-- NYC BOROUGHS (INNER RING) -->
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('harlem')">
+                                <circle cx="500" cy="330" r="22" fill="#FF0099" opacity="0.9" />
+                                <text x="500" y="335" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">HARLEM</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('queens')">
+                                <circle cx="580" cy="390" r="22" fill="#FF0099" opacity="0.9" />
+                                <text x="580" y="395" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">QUEENS</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('brooklyn')">
+                                <circle cx="570" cy="480" r="22" fill="#FF0099" opacity="0.9" />
+                                <text x="570" y="485" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">BROOKLYN</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('staten')">
+                                <circle cx="430" cy="480" r="20" fill="#FF0099" opacity="0.9" />
+                                <text x="430" y="485" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">SHAOLIN</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('longisland')">
+                                <circle cx="660" cy="380" r="20" fill="#FF0099" opacity="0.8" />
+                                <text x="660" y="415" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">LONG ISLAND</text>
+                            </g>
+                            
+                            <!-- NJ (6TH BORO) -->
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('nj')">
+                                <circle cx="400" cy="400" r="24" fill="#FF0099" opacity="1" stroke="#fff" stroke-width="1" />
+                                <text x="360" y="405" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">JERSEY</text>
+                                <text x="360" y="418" text-anchor="middle" fill="#FF0099" font-size="8">6TH BORO</text>
+                            </g>
+
+                            <!-- US REGIONS (MID RING) -->
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('east')">
-                                <circle cx="500" cy="250" r="30" fill="#FF0099" opacity="0.9" />
-                                <text x="500" y="255" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">EAST COAST</text>
+                                <circle cx="500" cy="200" r="35" fill="#FF0099" opacity="0.9" />
+                                <text x="500" y="205" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">EAST COAST</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('west')">
-                                <circle cx="250" cy="400" r="30" fill="#00F3FF" opacity="0.9" />
-                                <text x="250" y="405" text-anchor="middle" fill="#000" font-size="10" font-weight="bold">WEST COAST</text>
+                                <circle cx="180" cy="420" r="35" fill="#00F3FF" opacity="0.9" />
+                                <text x="180" y="425" text-anchor="middle" fill="#000" font-size="11" font-weight="bold">WEST COAST</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('south')">
-                                <circle cx="750" cy="400" r="30" fill="#bd00ff" opacity="0.9" />
-                                <text x="750" y="405" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">DIRTY SOUTH</text>
+                                <circle cx="820" cy="420" r="35" fill="#bd00ff" opacity="0.9" />
+                                <text x="820" y="425" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">DIRTY SOUTH</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('chicago')">
+                                <circle cx="300" cy="250" r="30" fill="#FBBF24" opacity="0.9" />
+                                <text x="300" y="215" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">CHICAGO</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('native')">
+                                <circle cx="380" cy="580" r="22" fill="#FBBF24" opacity="0.8" />
+                                <text x="380" y="615" text-anchor="middle" fill="#FBBF24" font-size="9">NATIVE AM.</text>
+                            </g>
+                            
+                            <!-- US SATELLITES (EAST COAST CLUSTER) -->
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('philly')">
+                                <circle cx="550" cy="240" r="22" fill="#FF0099" opacity="0.8" />
+                                <text x="550" y="245" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">PHILLY</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('boston')">
+                                <circle cx="450" cy="240" r="20" fill="#FF0099" opacity="0.8" />
+                                <text x="450" y="245" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">BOSTON</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('bmore')">
+                                <circle cx="600" cy="270" r="20" fill="#FF0099" opacity="0.8" />
+                                <text x="600" y="275" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">BMORE</text>
                             </g>
 
-                            <!-- TIER 2: GLOBAL EXPANSION -->
-                            
-                            <!-- Europe -->
-                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('france')">
-                                <circle cx="500" cy="80" r="20" fill="#fff" opacity="0.7" />
-                                <text x="500" y="50" text-anchor="middle" fill="#fff" font-size="10">FRANCE</text>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('ohio')">
+                                <circle cx="260" cy="300" r="24" fill="#FBBF24" opacity="0.8" />
+                                <text x="260" y="335" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">OHIO</text>
+                                <text x="260" y="345" text-anchor="middle" fill="#FBBF24" font-size="8" opacity="0.8">RUTHLESS</text>
                             </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('texas')">
+                                <circle cx="820" cy="550" r="28" fill="#bd00ff" opacity="0.8" />
+                                <text x="820" y="585" text-anchor="middle" fill="#bd00ff" font-size="10" font-weight="bold">TEXAS</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('hawaii')">
+                                <circle cx="100" cy="420" r="20" fill="#00F3FF" opacity="0.7" />
+                                <text x="100" y="450" text-anchor="middle" fill="#00F3FF" font-size="9">HAWAII</text>
+                            </g>
+
+                            <!-- GLOBAL EXPANSION (OUTER RINGS) -->
+                            
+                            <!-- North America Neighbors -->
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('canada')">
+                                <circle cx="400" cy="140" r="25" fill="#fff" opacity="0.8" />
+                                <text x="400" y="110" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">CANADA</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('puertorico')">
+                                <circle cx="640" cy="300" r="24" fill="#fff" opacity="0.8" />
+                                <text x="680" y="305" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">PUERTO RICO</text>
+                            </g>
+
+                            <!-- Europe -->
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('ukdrill')">
-                                <circle cx="400" cy="100" r="20" fill="#fff" opacity="0.7" />
-                                <text x="370" y="105" text-anchor="middle" fill="#fff" font-size="10">UK</text>
+                                <circle cx="400" cy="80" r="20" fill="#fff" opacity="0.7" />
+                                <text x="370" y="85" text-anchor="middle" fill="#fff" font-size="10">UK</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('france')">
+                                <circle cx="480" cy="60" r="20" fill="#fff" opacity="0.7" />
+                                <text x="480" y="30" text-anchor="middle" fill="#fff" font-size="10">FRANCE</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('germany')">
-                                <circle cx="600" cy="100" r="20" fill="#fff" opacity="0.7" />
-                                <text x="640" y="105" text-anchor="middle" fill="#fff" font-size="10">GERMANY</text>
+                                <circle cx="560" cy="60" r="20" fill="#fff" opacity="0.7" />
+                                <text x="560" y="30" text-anchor="middle" fill="#fff" font-size="10">GERMANY</text>
+                            </g>
+                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('norway')">
+                                <circle cx="640" cy="90" r="20" fill="#fff" opacity="0.8" />
+                                <text x="680" y="95" text-anchor="middle" fill="#fff" font-size="10">NORWAY</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('russia')">
-                                <circle cx="720" cy="120" r="18" fill="#fff" opacity="0.6" />
-                                <text x="760" y="125" text-anchor="middle" fill="#fff" font-size="10">RUSSIA</text>
+                                <circle cx="720" cy="130" r="20" fill="#fff" opacity="0.6" />
+                                <text x="760" y="135" text-anchor="middle" fill="#fff" font-size="10">RUSSIA</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('siberia')">
+                                <circle cx="800" cy="100" r="18" fill="#fff" opacity="0.5" />
+                                <text x="830" y="105" text-anchor="middle" fill="#fff" font-size="9">SIBERIA</text>
+                            </g>
+                            <!-- Australia -->
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('australia')">
+                                <circle cx="320" cy="60" r="20" fill="#fff" opacity="0.6" />
+                                <text x="320" y="35" text-anchor="middle" fill="#fff" font-size="10">AUSTRALIA</text>
                             </g>
 
                             <!-- Asia/Americas -->
-                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('japan')">
-                                <circle cx="100" cy="300" r="20" fill="#00F3FF" opacity="0.6" />
-                                <text x="100" y="270" text-anchor="middle" fill="#00F3FF" font-size="10">JAPAN</text>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('china')">
+                                <circle cx="100" cy="150" r="22" fill="#00F3FF" opacity="0.5" />
+                                <text x="100" y="120" text-anchor="middle" fill="#00F3FF" font-size="10">CHINA</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('asia')">
-                                <circle cx="80" cy="450" r="18" fill="#00F3FF" opacity="0.5" />
-                                <text x="80" y="485" text-anchor="middle" fill="#00F3FF" font-size="10">S. KOREA</text>
+                                <circle cx="80" cy="240" r="20" fill="#00F3FF" opacity="0.5" />
+                                <text x="80" y="275" text-anchor="middle" fill="#00F3FF" font-size="10">S. KOREA</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('japan')">
+                                <circle cx="120" cy="320" r="22" fill="#00F3FF" opacity="0.6" />
+                                <text x="120" y="290" text-anchor="middle" fill="#00F3FF" font-size="10">JAPAN</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('india')">
+                                <circle cx="60" cy="350" r="24" fill="#00F3FF" opacity="0.7" />
+                                <text x="60" y="390" text-anchor="middle" fill="#00F3FF" font-size="10">INDIA</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('mexico')">
+                                <circle cx="120" cy="520" r="24" fill="#00F3FF" opacity="0.8" />
+                                <text x="80" y="525" text-anchor="middle" fill="#00F3FF" font-size="10">MEXICO</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('brazil')">
                                 <circle cx="200" cy="600" r="25" fill="#00F3FF" opacity="0.7" />
                                 <text x="200" y="640" text-anchor="middle" fill="#00F3FF" font-size="10">BRAZIL</text>
                             </g>
 
-                            <!-- Africa -->
+                            <!-- Africa / Resistance -->
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('palestine')">
+                                <circle cx="850" cy="250" r="22" fill="#ef4444" opacity="0.9" />
+                                <text x="850" y="290" text-anchor="middle" fill="#ef4444" font-size="10">PALESTINE</text>
+                            </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('afrobeats')">
-                                <circle cx="850" cy="250" r="25" fill="#bd00ff" opacity="0.7" />
-                                <text x="890" y="255" text-anchor="middle" fill="#bd00ff" font-size="10">NIGERIA</text>
+                                <circle cx="900" cy="350" r="25" fill="#bd00ff" opacity="0.7" />
+                                <text x="940" y="355" text-anchor="middle" fill="#bd00ff" font-size="10">NIGERIA</text>
+                            </g>
+                            <g class="cursor-pointer tree-node" onclick="showNodeDetails('ethiopia')">
+                                <circle cx="950" cy="280" r="20" fill="#bd00ff" opacity="0.6" />
+                                <text x="990" y="285" text-anchor="middle" fill="#bd00ff" font-size="10">ETHIOPIA</text>
                             </g>
                             <g class="cursor-pointer tree-node" onclick="showNodeDetails('southafrica')">
-                                <circle cx="900" cy="500" r="22" fill="#bd00ff" opacity="0.6" />
-                                <text x="900" y="540" text-anchor="middle" fill="#bd00ff" font-size="10">S. AFRICA</text>
+                                <circle cx="920" cy="480" r="22" fill="#bd00ff" opacity="0.6" />
+                                <text x="920" y="520" text-anchor="middle" fill="#bd00ff" font-size="10">S. AFRICA</text>
                             </g>
 
                         </svg>
@@ -921,12 +1134,68 @@
                 impact: "The foundation of all modern youth culture."
             },
             'east': {
-                title: "EAST COAST: THE MECCA",
+                title: "EAST COAST: THE REGION",
                 year: "1980s - 1990s",
                 color: "text-pink-500",
-                description: "New York City remained the epicenter. Defined by hard hitting drums (Boom Bap), sample-heavy production, and complex lyricism. The East Coast prioritized 'bars' and street authenticity above all else.",
-                figures: "Nas, Biggie, Wu-Tang Clan, Public Enemy",
+                description: "The broader East Coast sound extended beyond NYC. From the raw energy of Philly to the intellectual rap of Boston, the East Coast maintained a focus on lyricism and boom-bap production.",
+                figures: "Guru (Boston), The Roots (Philly), Wu-Tang (SI)",
                 impact: "Established the MC as a lyrical virtuoso."
+            },
+            'boston': {
+                title: "BOSTON: THE BEAN",
+                year: "1980s - Present",
+                color: "text-pink-500",
+                description: "Known for intellectual depth and raw street ethics. The scene produced legends like Guru (of Gang Starr), who pioneered the fusion of Jazz and Hip-Hop, and underground stalwarts like Edo G. It balances gritty boom-bap with high-level lyricism.",
+                figures: "Guru, Edo G, Benzino, Joyner Lucas, Coi Leray",
+                impact: "Pivotal in bridging Jazz and Hip-Hop (Gang Starr)."
+            },
+            'bmore': {
+                title: "BALTIMORE: B-MORE CLUB",
+                year: "1990s - Present",
+                color: "text-pink-500",
+                description: "A unique blend of Hip-Hop and high-energy breakbeat house. 'B-More Club' music is raw, repetitive, and designed for dance battles. It heavily influenced modern Jersey Club and mainstream pop production.",
+                figures: "Miss Tony, Rye Rye, Tate Kobang, JPEGMAFIA, 6lack",
+                impact: "Created the 'Club' sound that permeates modern dance music."
+            },
+            'harlem': {
+                title: "HARLEM: MANHATTAN",
+                year: "1970s - Present",
+                color: "text-pink-500",
+                description: "Harlem brought the 'Swag' to Hip-Hop. Known for flashy fashion and a distinct, confident slang. From the early days of Doug E. Fresh to the Diplomats (Dipset) era, Harlem defined the 'hustler' aesthetic.",
+                figures: "Big L, Cam'ron, Doug E. Fresh, A$AP Rocky, Puff Daddy",
+                impact: "Invented the modern 'Fly' aesthetic and commercial dominance."
+            },
+            'queens': {
+                title: "QUEENS: THE BRIDGE",
+                year: "1980s - Present",
+                color: "text-pink-500",
+                description: "Queensbridge Houses is arguably the most important block in Hip-Hop history outside the Bronx. Queens artists introduced complex poetic lyricism (Nas) and grimy street tales (Mobb Deep), as well as the commercial juggernauts (50 Cent, LL Cool J).",
+                figures: "Nas, Mobb Deep, A Tribe Called Quest, 50 Cent, Run-DMC",
+                impact: "Perfected the 'Street Poet' archetype."
+            },
+            'brooklyn': {
+                title: "BROOKLYN: SPREAD LOVE",
+                year: "1980s - Present",
+                color: "text-pink-500",
+                description: "Brooklyn is the heavy hitter. Known for a harder, grittier edge and immense pride. It produced arguably the greatest flow of all time (Biggie) and the biggest mogul of all time (Jay-Z).",
+                figures: "Notorious B.I.G., Jay-Z, Mos Def, Lil' Kim, Big Daddy Kane",
+                impact: "Dominated the 90s and 2000s commercial landscape."
+            },
+            'staten': {
+                title: "STATEN ISLAND: SHAOLIN",
+                year: "1990s - Present",
+                color: "text-pink-500",
+                description: "The rugged, isolated borough. The Wu-Tang Clan turned Staten Island into 'Shaolin', creating a dark, cinematic, Kung-Fu influenced mythology that changed the business of Hip-Hop forever.",
+                figures: "Wu-Tang Clan (RZA, Method Man, Ghostface Killah)",
+                impact: "Revolutionized the 'Posse Cut' and independent business leverage."
+            },
+            'longisland': {
+                title: "LONG ISLAND: THE SUBURBS",
+                year: "1980s - Present",
+                color: "text-pink-500",
+                description: "Don't sleep on Strong Island. The suburbs produced some of the most innovative and avant-garde styles in history, from the complex rhyme schemes of Rakim to the political fury of Public Enemy and the jazz-rap of De La Soul.",
+                figures: "Rakim, Public Enemy, De La Soul, EPMD, MF DOOM",
+                impact: "Introduced advanced lyricism and sampling versatility."
             },
             'west': {
                 title: "WEST COAST: G-FUNK",
@@ -943,6 +1212,110 @@
                 description: "The 'Third Coast.' Defined by deep 808 bass, fast hi-hats, and chants. From Miami Bass to New Orleans Bounce to Atlanta Trap, the South created the dominant sound of modern radio.",
                 figures: "Outkast, Lil Wayne, Three 6 Mafia",
                 impact: "Created 'Trap' music, the current global standard."
+            },
+            'texas': {
+                title: "TEXAS: CHOPPED & SCREWED",
+                year: "1990s - Present",
+                color: "text-purple-500",
+                description: "Everything is bigger in Texas. DJ Screw created a genre by slowing records down to a hallucinogenic crawl. Meanwhile, UGK and Scarface provided the gritty, blues-soaked storytelling that defined Southern lyricism.",
+                figures: "DJ Screw, UGK (Bun B & Pimp C), Scarface, Travis Scott, Megan Thee Stallion",
+                impact: "Invented the 'Chopped & Screwed' remix technique."
+            },
+            'jamaica': {
+                title: "JAMAICA: THE ROOTS",
+                year: "1960s - Present",
+                color: "text-green-500",
+                description: "Without Jamaica, there is no Hip-Hop. The Sound System culture, the concept of the 'DJ' (Selector) and 'Toasting' (rhythmic talking over beats) were brought to the Bronx by Jamaican immigrants like DJ Kool Herc. It is the spiritual motherland of the culture.",
+                figures: "DJ Kool Herc, King Tubby, Sean Paul, Bob Marley",
+                impact: "Provided the blueprint for the DJ, the MC, and the Remix (Dub)."
+            },
+            'canada': {
+                title: "CANADA: THE 6IX",
+                year: "2000s - Present",
+                color: "text-white",
+                description: "Once ignored, Toronto became the center of the music world in the 2010s. Led by Drake and The Weeknd, the 'Toronto Sound'—moody, atmospheric, and melody-driven—reshaped the sound of global pop and hip-hop.",
+                figures: "Drake, The Weeknd, Tory Lanez, KAYTRANADA, Kardinal Offishall",
+                impact: "Blurred the lines between R&B and Rap, dominating the streaming era."
+            },
+            'puertorico': {
+                title: "PUERTO RICO: REGGAETON",
+                year: "1990s - Present",
+                color: "text-white",
+                description: "Born from the mix of Panamanian reggae en español and NYC Hip-Hop, Reggaeton is the cousin of Hip-Hop. Artists like Daddy Yankee and Bad Bunny have taken the 'Dembow' rhythm and made it the most consumed genre on the planet.",
+                figures: "Daddy Yankee, Bad Bunny, Tego Calderón, Ivy Queen",
+                impact: "Merging Hip-Hop swagger with Caribbean rhythms to conquer the world."
+            },
+            'australia': {
+                title: "AUSTRALIA: SKIP HOP & DRILL",
+                year: "1990s - Present",
+                color: "text-white",
+                description: "From the BBQ rap of the Hilltop Hoods to the gritty, Pacific-Islander led Drill scene of Western Sydney (Onefour), Australian Hip-Hop has evolved from imitating American accents to finding its own authentic, multicultural voice.",
+                figures: "Hilltop Hoods, The Kid LAROI, Onefour, Kerser",
+                impact: "Onefour's impact on the global Drill scene is undeniable."
+            },
+            'hawaii': {
+                title: "HAWAII: ISLAND FLOW",
+                year: "1990s - Present",
+                color: "text-cyan-400",
+                description: "A melting pot of cultures. Hawaiian Hip-Hop blends mainland influence with island vibes and reggae. It's a scene deeply connected to the land and the unique 'Pidgin' dialect.",
+                figures: "Katanagatari, Prie, Suds, Kavet the Catalyst",
+                impact: "Representing the Pacific Islander experience in the culture."
+            },
+            'ethiopia': {
+                title: "ETHIOPIA: ETHIO-HOP",
+                year: "2000s - Present",
+                color: "text-purple-500",
+                description: "Blending traditional Ethiopian scales (tizita, bati) with boom-bap and trap beats. The scene in Addis Ababa is vibrant, using the music to address social issues and celebrate the country's ancient history.",
+                figures: "Teddy Afro, Lij Michael, Skat Nati",
+                impact: "Fusing ancient pentatonic scales with modern 808s."
+            },
+            'nj': {
+                title: "JERSEY: THE 6TH BORO",
+                year: "1980s - Present",
+                color: "text-pink-500",
+                description: "New Jersey is more than the '6th Borough'; it is a spiritual fortress for the culture. Newark is the home of the **Temple of Hip Hop**, officially establishing it as a **Universal Cultural Landmark**. Alongside the South Bronx, it stands as a site of immense spiritual and cultural significance, serving as a guardian of Hip-Hop's divine principles and history.",
+                figures: "Naughty By Nature, Redman, Queen Latifah, The Fugees, Joe Budden",
+                impact: "Home of the Temple of Hip Hop; A Universal Cultural Landmark."
+            },
+            'philly': {
+                title: "PHILADELPHIA: ILLADELPH",
+                year: "1980s - Present",
+                color: "text-pink-500",
+                description: "Known for its ferocious battle rap culture and deep musicality. Philly MCs are known for aggression and storytelling. The Roots brought live instrumentation to the forefront, while the Roc-A-Fella era saw Beanie Sigel and Freeway define the street sound.",
+                figures: "The Roots, Meek Mill, Beanie Sigel, Eve, Schoolly D, Lil Uzi Vert",
+                impact: "Pioneered Gangsta Rap (Schoolly D) and Live Band Hip-Hop."
+            },
+            'chicago': {
+                title: "CHICAGO: THE WINDY CITY",
+                year: "1990s - Present",
+                color: "text-yellow-500",
+                description: "A tale of two cities: The soulful, conscious 'backpack' rap of the Common/Kanye West era, and the dark, nihilistic energy of the 'Drill' movement birthed by Chief Keef. Chicago is a central pillar of Hip-Hop innovation.",
+                figures: "Kanye West, Common, Twista, Lupe Fiasco, Chief Keef, Lil Durk",
+                impact: "Kanye changed production forever; Keef invented Drill."
+            },
+            'ohio': {
+                title: "OHIO: THE CROSSROADS",
+                year: "1990s - Present",
+                color: "text-yellow-500",
+                description: "The Midwest rapid-fire flow found its home here. The legendary connection happened when Bone Thugs-n-Harmony took a one-way bus ticket to LA to audition for Eazy-E. Eazy signed them to Ruthless Records, bridging the gap between Midwest speed and West Coast G-Funk aesthetics.",
+                figures: "Bone Thugs-n-Harmony, Kid Cudi, Machine Gun Kelly",
+                impact: "Popularized the melodic, double-time harmonizing flow."
+            },
+            'native': {
+                title: "NATIVE AMERICAN RESISTANCE",
+                year: "Pre-History - Present",
+                color: "text-yellow-500",
+                description: "Hip-Hop has become a modern tool for indigenous storytelling and resistance. Artists use the culture to address decolonization, water rights, and the preservation of native languages, often blending traditional singing and drumming with boom-bap production.",
+                figures: "Supaman, Frank Waln, Redified, Litefoot",
+                impact: "Reclaiming the narrative and fighting erasure through rhyme."
+            },
+            'mexico': {
+                title: "MEXICO: RAP MEXICANO",
+                year: "1990s - Present",
+                color: "text-cyan-400",
+                description: "Mexican Hip-Hop is a massive, diverse scene ranging from the Chicano-influenced 'Rap Malandro' to socially conscious lyricism. Groups like Control Machete pioneered the fusion of local sounds with hardcore rap, creating anthems that resonated across all Latin America.",
+                figures: "Control Machete, Cartel de Santa, Alemán, Snow Tha Product",
+                impact: "A major voice for youth culture across the Spanish-speaking world."
             },
             'france': {
                 title: "FRANCE: LE RAP FRANÇAIS",
@@ -968,6 +1341,14 @@
                 figures: "Bushido, Sido, Kool Savas, Apache 207",
                 impact: "Massive commercial dominance in Central Europe."
             },
+            'norway': {
+                title: "NORWAY: NORDIC FLAVOR",
+                year: "1990s - Present",
+                color: "text-white",
+                description: "The Norwegian scene is known for its political edge. Groups like Gatas Parlament have used rap as a vehicle for leftist politics. Demonstrating true global expansion, they collaborated with US underground legends like Sean Price, Pumpkinhead, and Venomous2000.",
+                figures: "Gatas Parlament, Karpe, Madcon",
+                impact: "Proving that Hip-Hop's message of resistance transcends language barriers."
+            },
             'russia': {
                 title: "RUSSIA: RUSSIAN RAP",
                 year: "2000s - Present",
@@ -976,6 +1357,14 @@
                 figures: "Timati, Oxxxymiron, Basta, Pharaon",
                 impact: "One of the most active Battle Rap scenes (Versus Battle) globally."
             },
+            'siberia': {
+                title: "SIBERIA: THE FROZEN UNDERGROUND",
+                year: "2010s - Present",
+                color: "text-white",
+                description: "Deep in the Russian interior, a distinct scene thrives. A notable example of global grassroots connection is the collaboration between Siberian artist Trilian and New Jersey's Venomous2000, showcasing how the culture connects the most distant points on the map.",
+                figures: "Trilian, 104, Truwer",
+                impact: "Demonstrating the global reach of the underground network."
+            },
             'japan': {
                 title: "JAPAN: J-HIP HOP",
                 year: "1990s - Present",
@@ -983,6 +1372,22 @@
                 description: "Japanese Hip-Hop started with a focus on breaking and DJing. Producers like Nujabes created a global cult following for 'Lo-Fi' jazz hop. Today, the scene mixes Trap with distinct Japanese street fashion.",
                 figures: "Nujabes, Zeebra, Teriyaki Boyz, KOHH",
                 impact: "Pioneered the Lo-Fi / Jazz Hop aesthetic globally."
+            },
+            'china': {
+                title: "CHINA: THE RAP OF CHINA",
+                year: "2000s - Present",
+                color: "text-cyan-400",
+                description: "Despite strict censorship, Hip-Hop exploded in China via underground battles (Iron Mic) and reality TV. The scene mixes trap beats with dialect rap (Sichuanese) and traditional Chinese instrumentation.",
+                figures: "Higher Brothers, GAI, Vava, MaSiWei, Lay Zhang",
+                impact: "A massive new market navigating tradition and modernity."
+            },
+            'india': {
+                title: "INDIA: DESI HIP HOP & GULLY RAP",
+                year: "2000s - Present",
+                color: "text-cyan-400",
+                description: "From the pioneering sounds of Panjabi MC in the UK to the explosion of 'Gully Rap' in Mumbai. India's scene is a massive blend of regional languages, street struggle, and Bollywood polish. Recent viral hits have put Indian lyricism on the global map.",
+                figures: "Divine, Naezy, Hanumankind, Prabh Deep, Brodha V",
+                impact: "Bringing vernacular storytelling to a billion people."
             },
             'asia': {
                 title: "SOUTH KOREA: K-HIP HOP",
@@ -1001,12 +1406,20 @@
                 impact: "Giving a voice to the favelas and Afro-Brazilian identity."
             },
             'afrobeats': {
-                title: "NIGERIA: AFROBEATS FUSION",
+                title: "NIGERIA: NAIJA RAP & AFROBEATS",
                 year: "2010s - Present",
                 color: "text-purple-500",
-                description: "The giant of Africa. While distinct from US rap, modern Afrobeats fuses traditional rhythms with Dancehall and Hip-Hop cadence. It is currently the most influential sound in the global pop diaspora.",
-                figures: "Burna Boy, Wizkid, Davido, Olamide",
+                description: "The giant of Africa. Nigerian Hip-Hop (Naija Rap) blends indigenous languages (Igbo, Yoruba) with English. Pioneers like M.I Abaga set the bar for lyricism, while the Afrobeats explosion took the rhythm global.",
+                figures: "M.I Abaga, Olamide, Phyno, Burna Boy, Wizkid",
                 impact: "Reversing the flow: Africa now influences American pop."
+            },
+            'palestine': {
+                title: "PALESTINE: RESISTANCE MUSIC",
+                year: "1990s - Present",
+                color: "text-red-500",
+                description: "Palestinian Hip-Hop is inextricably linked to identity and resistance. DAM (Da Arabian MCs) from Lod famously used Hip-Hop to broadcast the reality of occupation to the world. It is 'CNN for the people' in its purest form.",
+                figures: "DAM, Shadia Mansour, The Synaptik, MC Abdul",
+                impact: "A powerful tool for cultural preservation and political protest."
             },
             'southafrica': {
                 title: "SOUTH AFRICA: KWAITO & LYRICAL",
@@ -1160,6 +1573,10 @@
                 newLabel = 'Dirty South';
                 newData = [7, 8, 7, 5, 10];
                 newColor = '#a855f7';
+            } else if (region === 'north') {
+                newLabel = 'The North (Speed & Soul)';
+                newData = [8, 9, 4, 10, 6]; // High samples, High Speed, Low Synth, Max Lyrics, Med Bass
+                newColor = '#eab308';
             }
 
             radarChart.data.datasets[0].label = newLabel;
